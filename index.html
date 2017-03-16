@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>HTML ToolTip</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <meta name="author" content="Mayank Pandey">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="htmltooltip.js"></script>
-    
     <script type="text/javascript">
     $(document).ready(function(){
-        $("p1").tooltip({
+
+        $("p").tooltip({
             autoClose: false,
             color: "black",
             backgroundColor: "#F2F2F4",
@@ -23,36 +21,8 @@
     </script>
 </head>
 <body>
-
-<div class="jumbotron text-center">
-    <h1>HTML ToolTip</h1>
-</div>
-  
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <h3>What is tooltip?</h3>
-            <p>
-                The <code>tooltip</code> or <code>infotip</code> or a hint is a common graphical user interface element. It is used in conjunction with a cursor, usually a pointer. The user hovers the pointer over an item, without clicking it, and a tooltip may appear—a small "hover box" with information about the item being hovered over.
-            </p>
-        </div>
-        <div class="col-sm-4">
-            <h3>What's new about this?</h3>
-            <p>
-                There are so many plug-ins available to show tooltip on your webpage in which one can show <code>text</code> of any length on tooltip. But as the name suggest you can show <code>text</code> as well as <code>html</code> like <code>image</code> and <code>anchors</code> in tooltip.
-            </p>
-        </div>
-        <div class="col-sm-4">
-            <h3>How this is possible?</h3>        
-            <p>
-                This is possible by just including a light weight fully configured jquery library with your code and just call its functionality and its done!
-            </p>
-            <p>Example</p>
-            <p style="width:400px;" id="p1" tooltip="tooltip 1" tooltip-link="http://www.google.com" tooltip-link-text="Reference" tooltip-image="http://www.animatedimages.org/data/media/510/animated-light-bulb-image-0002.gif">
-        This is a paragraph</p>
-        </div>
-    </div>
-</div>
-
+    <p style="width:400px;" id="p1" tooltip="tooltip 1" tooltip-link="http://www.google.com" tooltip-link-text="Reference" tooltip-image="http://www.animatedimages.org/data/media/510/animated-light-bulb-image-0002.gif">
+        This is a paragraph
+    </p>
 </body>
 </html>
