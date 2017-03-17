@@ -5,10 +5,9 @@
 **/
 
 (function ( $ ) {
-    $.fn.tooltip = function( options ) {
+    $.fn.htmltooltip = function( options ) {
         var settings = $.extend({
             autoClose: true,
-
             color: "#fff",
             backgroundColor: "#333",
             position: "absolute",
