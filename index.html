@@ -1,28 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>HTML ToolTip</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <meta name="author" content="Mayank Pandey">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="htmltooltip.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+        }
+        html,body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            color: #505050;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+        }
+        .clear {
+            clear: both;
+        }
+        .bg_background {
+            background: #333;
+        }
+        .bg_gray {
+            background: #f7f7f7;
+        }
+        .mainWrapper {
+            width: 100%;
+            display: block;
+        }
+        .forHeading {
+            padding: 2%;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0px 5px 10px #999;
+            -webkit-box-shadow: 0px 5px 10px #999;
+            -ms-box-shadow: 0px 5px 10px #999;
+        }
+        .forHeading h1 {
+            font-family: 'News Cycle', sans-serif;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .container {
+            width: 1170px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .childContainer {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 3px 10px #999;
+            -webkit-box-shadow: 0px 3px 10px #999;
+            -ms-box-shadow: 0px 3px 10px #999;
+        }
+        .childContainer h4 {
+            padding: 5px 0px;
+            /* background: #333; */
+            font-family: 'News Cycle', sans-serif;
+            color: #333;
+            font-size: 20px;
+            /* text-transform: uppercase; */
+            letter-spacing: 1px;
+        }
+        .childContainer p {
+            padding: 10px 0;
+        }
+        .childContainer p.tooltip {
+            padding-bottom: 30px;
+        }
+        .childContainer code {
+            color: #ff7e45;
+            padding: 2px 4px;
+            font-size: 90%;
+            background-color: #f9f2f4;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .childContainer code.section {
+            margin: 10px 0 0 0;
+        }
+        .childContainer h5 {
+            color: #fff;
+            padding: 3px 10px;
+            letter-spacing: 2px;
+        }
+        ul.explore {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            font-size: 13px;
+        }
+        ul.explore li {
+            display: block;
+            margin: 2px;
+            padding: 5px 5px;
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
     <script type="text/javascript">
-    $(document).ready(function(){
-
-        $("p").htmltooltip({
-            autoClose: false,
-            color: "black",
-            backgroundColor: "#F2F2F4",
-            bottom: "-20px"
+        $(document).ready(function(){
+            $("#p1").htmltooltip({
+                autoClose: false,
+                color: "black",
+                backgroundColor: "#F2F2F4",
+                bottom: "0px"
+            });
         });
-    });
     </script>
 </head>
 <body>
-    <p style="width:400px;" id="p1" tooltip="tooltip 1" tooltip-link="http://www.google.com" tooltip-link-text="Reference" tooltip-image="http://www.animatedimages.org/data/media/510/animated-light-bulb-image-0002.gif">
-        This is a paragraph
-    </p>
+    <div class="mainWrapper">
+        <div class="forHeading bg_background">
+            <h1>All About HTML ToolTip</h1>
+        </div>
+
+        <div class="container">
+            <div class="childContainer ">
+                <h4>What is tooltip?</h4>
+                <p>
+                    The <code>tooltip</code> or <code>infotip</code> or a hint is a common graphical user interface element. It is used in conjunction with a cursor, usually a pointer. The user hovers the pointer over an item, without clicking it, and a tooltip may appear—a small "hover box" with information about the item being hovered over.
+                </p>
+            </div>
+            <div class="childContainer ">
+                <h4>What's new about this?</h4>
+                <p>
+                    There are so many plug-ins available to show tooltip on your webpage in which one can show <code>text</code> of any length on tooltip. But as the name suggest you can show <code>text</code> as well as <code>html</code> like <code>image</code> and <code>anchors</code> in tooltip.
+                </p>
+            </div>
+            <div class="childContainer ">
+                <h4>How this is possible?</h4>        
+                <p>
+                    This is possible by just including a light weight fully configured jquery library with your code and just call its functionality and its done!
+                </p>
+            </div>
+            <div class="childContainer ">
+                <h4>Demo</h4>
+                <p id="p1" class="tooltip" tooltip="tooltip 1" tooltip-link="http://www.google.com" tooltip-link-text="Reference" tooltip-image="http://www.animatedimages.org/data/media/510/animated-light-bulb-image-0002.gif">
+                    <code>Hover over me</code>
+                </p>
+            </div>
+            <div class="childContainer ">
+                <h4>How to configure?</h4>        
+                <p>
+                    You can configure all of its attributes by just passing its value at the time of initialization.
+                </p>
+            </div>
+            <div class=" childContainer">
+                <h5 class="bg_background">Initialization: </h5>
+                <pre>
+                    <p class="section">
+                        $("#p1").htmltooltip();
+                    </p>   
+                </pre>
+
+                <h5 class="bg_background">Initialization with attributes: </h5>
+                <pre>
+                    <p class="section">
+                        $("#p1").htmltooltip({
+                        autoClose: false,
+                        backgroundColor: "#F2F2F4",
+                        borderRadius: "5px",
+                        bottom: "-20px",
+                        color: "black",
+                        fontSize: "12px",
+                        left: "0px",
+                        padding: "5px",
+                        right: "0px",
+                        top: "0px"
+                    });
+                </p>
+            </pre>
+        </div>
+        <div class=" childContainer">
+            <ul class="explore">
+                <li><strong>autoClose</strong>: The tooltip is automatically hide when mouse out is triggered, its default value is <code>true</code>. If set to <code>false</code></li>
+                <li><strong>backgroundColor</strong>: Background color of the tooltip. You can pass color using <code>Color Name like RED</code> or <code>HEX Value like #F0F8FF</code></li>
+                <li><strong>borderRadius</strong>: The border radius of the tooltip</li>
+                <li><strong>bottom</strong>: To set the tooltip <code>bottom</code> property</li>
+                <li><strong>color</strong>: Color of the text in tooltip. You can pass color using <code>Color Name like RED</code> or <code>HEX Value like #F0F8FF</code></li>
+                <li><strong>fontSize</strong>: Font size of the text in tooltip. You can any value like <code>12px, 14px etc</code></li>
+                <li><strong>left</strong>: To set the tooltip <code>left</code> property</li>
+                <li><strong>padding</strong>: Padding of the tooltip. You can any value like <code>5px, 8px etc</code></li>
+                <li><strong>right</strong>: To set the tooltip <code>right</code> property</li>
+                <li><strong>top</strong>: To set the tooltip <code>top</code> property</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
 </body>
 </html>
